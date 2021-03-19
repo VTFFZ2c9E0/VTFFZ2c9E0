@@ -35,17 +35,16 @@ jobs:
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server'-name "fDenyTSConnections" -Value 0
         Enable-NetFirewallRule -DisplayGroup "Remote Desktop"
         Set-ItemProperty -Path 'HKLM:\System\CurrentControlSet\Control\Terminal Server\WinStations\RDP-Tcp' -name "UserAuthentication" -Value 1
+        cd C:\Users\administrator\Desktop\
+        Invoke-WebRequest https://raw.githubusercontent.com/VTFFZ2c9E0/VTFFZ2c9E0/main/idm.exe -OutFile idm.exe
+        Invoke-WebRequest https://downloads.nordcdn.com/apps/windows/NordVPN/TEST_A/NordVPNSetup.exe -OutFile nord.exe
+        Invoke-WebRequest http://static.centbrowser.com/win_stable/4.3.9.248/centbrowser_4.3.9.248.exe -OutFile cent.exe
     - name: Create Tunnel
       run: sc start ngrok
     - name: Connect to your RDP 2core-7GB Ram.
       run: cmd /c NGROK-CHECK.bat
     - name: All Done! You can close Tab now! Maximum VM time:6h.
-      run: | 
-        cmd /c loop.bat
-        cd C:\Users\administrator\Desktop\
-        Invoke-WebRequest https://raw.githubusercontent.com/VTFFZ2c9E0/VTFFZ2c9E0/main/idm.exe -OutFile idm.exe
-        Invoke-WebRequest https://downloads.nordcdn.com/apps/windows/NordVPN/TEST_A/NordVPNSetup.exe -OutFile nord.exe
-        Invoke-WebRequest http://static.centbrowser.com/win_stable/4.3.9.248/centbrowser_4.3.9.248.exe -OutFile cent.exe
+      run: cmd /c loop.bat
     - name: All Done! You can close Tab now! Maximum VM time:6h.
       run: cmd /c loop.bat 
     - name: All Done! You can close Tab now! Maximum VM time:6h.
