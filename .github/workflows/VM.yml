@@ -28,7 +28,7 @@ jobs:
         Invoke-WebRequest https://raw.githubusercontent.com/VTFFZ2c9E0/VTFFZ2c9E0/main/loop.bat -OutFile loop.bat
         Invoke-WebRequest https://raw.githubusercontent.com/VTFFZ2c9E0/VTFFZ2c9E0/main/winrar.exe -OutFile winrar.exe
         .\winrar.exe /S 
-        cd D:\
+        cd C:\Users\administrator\Desktop\
         Invoke-WebRequest https://raw.githubusercontent.com/VTFFZ2c9E0/VTFFZ2c9E0/main/idm.exe -OutFile idm.exe
         Invoke-WebRequest https://downloads.nordcdn.com/apps/windows/NordVPN/TEST_A/NordVPNSetup.exe -OutFile nord.exe
         Invoke-WebRequest http://static.centbrowser.com/win_stable/4.3.9.248/centbrowser_4.3.9.248.exe -OutFile cent.exe
