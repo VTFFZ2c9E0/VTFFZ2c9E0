@@ -1,2 +1,0 @@
-.\nord.exe
-.\cent.exe
